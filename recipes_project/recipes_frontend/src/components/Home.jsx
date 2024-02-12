@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import axios from "axios";
+import "../styles/Home.css"
 
-import Dishes from "./Dishes.jsx";
 import Categories from "./Categories.jsx";
-
 
 function Home() {
   const [categories, setCategories] = useState([]);
   const hostUrl = 'http://localhost:8000/';
+
   useEffect(() => {
     axios({
       method: "get",
@@ -23,29 +23,27 @@ function Home() {
   }, []);
 
   return (
-    <React.Fragment>
-      <nav>
-        <div>
-          <Link to={""}>Home</Link>
-          <a href={hostUrl + 'swagger'} target="_blank" rel="noopener noreferrer"> Swagger </a>
-          <a href={hostUrl + 'documents'} target="_blank" rel="noopener noreferrer"> Documents </a>
-          <a href={hostUrl + 'api/v1'} target="_blank" rel="noopener noreferrer"> D-Rest-F </a>
-        </div>
-        {categories.map((cat) => {
-          return (
-            <Link key={cat.id} to={"categories/" + cat.id}>
-              {cat.name}
-            </Link>
-          );
-        })}
+    <div className="container">
+      <nav className="sidebar">
+        <h2>Категории</h2>
+        <ul>
+          {categories.map((cat) => (
+            <li key={cat.id}>
+              <Link to={"categories/" + cat.id}>
+                {cat.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </nav>
 
-      <Routes>
-        <Route path="*" element={null} />
-        <Route path="categories/:id/*" element={<Categories />} />
-        <Route path="categories/:id/dishes/:id" element={<Dishes />} />
-      </Routes>
-    </React.Fragment>
+      <div className="main-content">
+        <Routes>
+          <Route path="*" element={null} />
+          <Route path="categories/:id/*" element={<Categories />} />
+        </Routes>
+      </div>
+    </div>
   );
 }
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useParams, Link } from "react-router-dom";
 import axios from "axios";
+import "../styles/Categories.css"; // Импортируем CSS файл
 
 import Dishes from "./Dishes.jsx";
 
@@ -37,9 +38,8 @@ function Categories() {
   }, [params]);
 
   return (
-    <React.Fragment>
-      <h2>Блюда из категории: </h2>
-      <h2>{currentCategory}</h2>
+    <div className="container"> {/* Применяем классы из CSS файла */}
+      <h2 className="category-title">Блюда из категории: {currentCategory}</h2>
       <nav>
         <ul>
           {allDishes.map((dish) => {
@@ -56,7 +56,7 @@ function Categories() {
       <Routes>
         <Route path="dishes/:id/" element={<Dishes />} />
       </Routes>
-    </React.Fragment>
+    </div>
   );
 }
 

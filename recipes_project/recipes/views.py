@@ -19,7 +19,7 @@ class CategoryViewSet(viewsets.ModelViewSet):
 swager_view = get_schema_view(  
     openapi.Info(
         title="My recipes dishes API",
-        default_version='v1',
+        default_version='special',
         description="Use methods below for data access",
     ),
     public=True,
