@@ -1,0 +1,28 @@
+.dish-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dish-name {
+    margin-bottom: 20px; /* Увеличим расстояние между названием и изображением */
+  }
+  
+  .dish-image-container {
+    width: 400px; /* Увеличим ширину изображения */
+    height: 300px; /* Увеличим высоту изображения */
+    margin-bottom: 20px; /* Увеличим расстояние между изображением и описанием */
+    overflow: hidden; /* Обрежем изображение, если оно больше контейнера */
+  }
+  
+  .dish-image {
+    width: 100%; /* Заполним полностью контейнер изображения */
+    height: auto; /* Автоматический размер по высоте */
+  }
+  
+  .dish-description {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+  

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import "../styles/Dishes.css"; // Импортируем CSS файл для стилей
 
 function Dishes() {
   const params = useParams();
@@ -19,15 +20,13 @@ function Dishes() {
   }, [params]);
 
   return (
-    <React.Fragment>
-      <div>
-        <div>Блюдо:</div>
-        <div>{dish.name}</div>
-        <div>Рецепт:</div>
-        <div>{dish.description}</div>
-        <img src={dish.photo} alt="Изображение недоступно" />
+    <div className="dish-container">
+      <h2 className="dish-name">{dish.name}</h2>
+      <div className="dish-image-container">
+        <img className="dish-image" src={dish.photo} alt="Изображение недоступно" />
       </div>
-    </React.Fragment>
+      <div className="dish-description">{dish.description}</div>
+    </div>
   );
 }
 
