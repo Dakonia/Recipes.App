@@ -1,6 +1,7 @@
 venv
 /venv
 /node_modules
+/recipes_frontend/node_modules
 /.pnp
 .pnp.js
 
