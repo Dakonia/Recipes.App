@@ -10,7 +10,9 @@ function Header() {
 
   return (
     <div className="header">
-      <h1 className="logo">Книга рецептов</h1>
+      <h1 className="logo">
+        <a href="http://localhost:8080">Книга рецептов</a>
+      </h1>
       <div className="documentation-menu">
         <span
           className="documentation-toggle"

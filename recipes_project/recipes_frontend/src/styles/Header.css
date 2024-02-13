@@ -1,25 +1,33 @@
+@font-face {
+  font-family:'Lobster' ;
+  src: url('../Font/Lobster-Regular.ttf');
+}
 .header {
-  background-color: black; /* темный фон */
-  color: white; /* белый текст */
+  background-color: black; 
+  color: white; 
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 5px;
   border-radius: 0px;
-  position: fixed; /* зафиксировать header */
+  position: fixed; 
   top: 0;
-  left: 0; /* прижать к верхнему краю страницы */
-  width: 100%; /* ширина 100%, чтобы занимал всю ширину экрана */
-  z-index: 1000; /* установить высокий z-index, чтобы header был поверх других элементов */
+  left: 0; 
+  width: 100%; 
+  z-index: 1000; 
+  font-family: 'Lobster', sans-serif;
 }
 
-.logo {
+.logo a {
+  color: white; 
+  text-decoration: none; 
   margin-left: 40px;
 }
 
+
 .documentation-menu {
   position: relative;
-  margin-right: 40px; /* Добавить отступ справа */
+  margin-right: 40px; 
 }
 
 .documentation-toggle {
@@ -28,16 +36,16 @@
 
 .dropdown-content {
   position: absolute;
-  top: calc(100% + 5px); /* Расположение меню под кнопкой */
-  left: -20px; /* Переместить меню влево на 20px */
-  background-color: #f9f9f9;
+  top: calc(100% + 5px); 
+  left: -20px;
+  background-color: #a39595;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  display: none; /* Изначально скрываем меню */
+  display: none; 
 }
 
-/* Показываем меню, когда .open присутствует */
+
 .documentation-menu .dropdown-content.open {
   display: block;
 }

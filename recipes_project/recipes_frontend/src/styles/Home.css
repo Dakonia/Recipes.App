@@ -1,18 +1,25 @@
+@font-face {
+  font-family:'Bad';
+  src: url('../Font/BadScript-Regular.ttf');
+}
+
 .container {
-    display: flex; /* Располагаем сайдбар и контент в ряд */
+    display: flex; 
   }
   
   .sidebar {
-    width: 250px; /* Ширина сайдбара */
-    background-color: #333; /* Цвет фона сайдбара */
-    color: white; /* Цвет текста в сайдбаре */
-    padding: 20px; /* Внутренние отступы сайдбара */
-    position: fixed; /* Позиционирование фиксированное */
-    top: 88px; /* Отступ сверху, равный высоте заголовка */
-    left: 0; /* Расположить сайдбар в левом краю */
-    bottom: 0; /* Растянуть сайдбар до нижнего края страницы */
-    overflow-y: auto; /* Добавить прокрутку, если контент слишком большой */
-    height: calc(100vh - 60px); /* Высота сайдбара равна высоте окна браузера минус высота заголовка */
+    width: 250px; 
+    background-color: #9b8f8f; 
+    color: rgb(4, 0, 0); 
+    padding: 20px; 
+    position: fixed; 
+    top: 88px; 
+    left: 0; 
+    bottom: 0; 
+    overflow-y: auto; 
+    height: calc(100vh - 60px); 
+    font-family: 'Bad', sans-serif;
+    font-size: 25px;
   }
   
   
@@ -21,31 +28,29 @@
   
   
   .sidebar h2 {
-    margin-top: 0; /* Убрать верхний отступ для заголовка */
+    margin-top: 0; 
   }
   
   .sidebar ul {
-    list-style-type: none; /* Убрать маркеры списка */
+    list-style-type: none; 
     padding: 0;
     margin: 0;
   }
   
   .sidebar li {
-    margin-bottom: 10px; /* Отступ между категориями */
+    margin-bottom: 10px; 
   }
   
   .sidebar a {
-    color: white; /* Цвет текста ссылок */
-    text-decoration: none; /* Убрать подчеркивание у ссылок */
+    color: white; 
+    text-decoration: none; 
   }
   
   .sidebar a:hover {
-    text-decoration: underline; /* Добавить подчеркивание при наведении */
+    text-decoration: underline; 
   }
-  
   .main-content {
-    flex: 1; /* Растягиваем основной контент на всю оставшуюся ширину */
-    padding: 20px; /* Внутренние отступы контента */
-    margin-left: 250px; /* Учитываем ширину сайдбара */
+    flex: 1; 
+    padding: 20px; 
+    margin-left: 250px; 
   }
-  

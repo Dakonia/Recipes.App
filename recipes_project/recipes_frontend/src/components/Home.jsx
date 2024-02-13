@@ -25,7 +25,7 @@ function Home() {
   return (
     <div className="container">
       <nav className="sidebar">
-        <h2>Категории</h2>
+        <h3>Категории</h3>
         <ul>
           {categories.map((cat) => (
             <li key={cat.id}>
